@@ -63,6 +63,7 @@
         <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
         <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd>
       </dl>
+      <div id="demo"></div>
     </script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
@@ -142,6 +143,19 @@
           }, false);
         }
       })();
+    </script>
+    <script>
+      function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+  }
+
+  async function myFunction() {return "Hello World";}
+
+  myFunction().then(
+    function(value) {myDisplayer(value);}
+  );
+
+
     </script>
   </body>
 </html>
